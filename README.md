@@ -4,6 +4,8 @@ Initial pitch for overall project
 
 ## Styling
 
+Embed an image of my mockup
+
 ### HTML
 
 Description of HTML
