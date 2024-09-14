@@ -5,7 +5,7 @@ You'll be able to find all kinds of detailed info about a pokemon you search for
 
 ## Styling
 
-!(startupmockup.png)
+!(/main/startupmockup.png)
 
 ### HTML/CSS
 
