@@ -11,6 +11,24 @@ You'll be able to find all kinds of detailed info about a pokemon you search for
 
 The login page and main landing page will both be structured using HTML and CSS.
 
+### HTML Deliverable: 
+
+HTML pages - I created two HTML pages (index.html and search.html) that will prompt the user to login or create an account and then be taken to a page where they can conduct searches
+
+Links - I have a nav bar that allows for easy navigation between the two pages, and a link to the Simon deployment for my website (simon.pokesearch.click). I also have a footer on each page that links to my github repo.
+
+Text - There is text instructing the user on what to do or what they're being prompted for, as well as placeholder text for where information will be populated from API calls and database info. The page will also display the user's username after they log in.
+
+Images - I have held off on this until after I do CSS styling so I know for sure where would make sense for images to be.
+
+DB/Login - the landing page prompts you to login or create an account so that the user's searches can be logged in a database, which will allow my most recent searches section to work.
+
+Websocket - There is a placeholder section for the day's most popular search to populate when multiple users are using the application.
+
+### CSS Deliverable: 
+
+coming soon
+
 ## Functionality
 
 ### Javascript
