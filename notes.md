@@ -14,9 +14,9 @@ ssh -i Downloads/production.pem ubuntu@pokesearch.click
 
 ## HTML
 
-<!DOCTYPE html> - declares document type to be html
+<"!DOCTYPE html"> - declares document type to be html
 
-HTML Tags: Paragraph - <p>, Ordered List - <ol>, Unordered List - <ul>, Heading - <h1>
+HTML Tags: Paragraph - <"p">, Ordered List - <"ol">, Unordered List - <"ul">, Heading - <"h1">
 
 div - groups elements together
 
@@ -24,9 +24,9 @@ Margin - space outside of an element's border / Padding - space within an elemen
 
 Span - has default CSS display value of inline
 
-Hyperlink images - wrap the <img> tag in the <a href> tag
+Hyperlink images - wrap the <"img"> tag in the <"a href"> tag
 
-Using the <script> tag lets you include JavaScript on an html page
+Using the <"script"> tag lets you include JavaScript on an html page
 
 ## CSS
 
