@@ -4,7 +4,7 @@
   body {
     display: flex;
     flex-direction: column;
-    background-color: whitesmoke;
+    background-color: #777;
   }
   main {
     flex: 1 30px;
@@ -13,23 +13,45 @@
     align-items: center;
     text-align: center;
     background-color: gold;
+    border-style: solid;
+    border-radius: 10px;
     padding: 10px
   }
   button {
     margin-top: 5px;
   }
   header {
-    flex: 0 0 80px;
-    color: blue;
+    flex: 0 0 140px;
     text-align: left;
-  }
-  menu {
-    flex: 0 10px;
-    color: blue;
   }
   footer {
     text-align: left;
-    bottom: 0%;
-    position: fixed;
-    margin: 10px
+    align-items: bottom;
+    margin: 10px;
+  }
+  a:link {
+    color: white;
+  }
+  a:hover {
+    color: rgb(202, 186, 186);
+  }
+  .navbar a:hover {
+    color: rgb(202, 186, 186);
+  }
+  .navbar {
+    background-color: #333;
+  }
+  .navbar a {
+    float: left;
+    color: white;
+    margin: 0;
+    text-decoration: none;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    padding: 12px 20px;
+  }
+  .navbar a.active {
+    background-color: rgb(99, 99, 101);
+    color: white;
   }

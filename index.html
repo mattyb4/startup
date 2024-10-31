@@ -12,13 +12,10 @@
 </head>
     <body>
         <header>
-            <h3> Quick Links</h3>
-            <nav>
-                <menu>
-                    <li><a href = "index.html">Login</a></li>
-                    <li><a href = "search.html">Search</a></li>
-                </menu>
-            </nav>
+            <div class = "navbar">
+                    <a class="active" href="index.html">Login</a>
+                    <a href = "search.html">Search</a>
+            </div>
         </header>
 
         <main>
@@ -26,14 +23,14 @@
             <form method = "get" action = "search.html">
                 <div>
                     <span>@</span>
-                    <input type="text" placeholder="your@email.com" />
+                    <input type="text" placeholder="username@email.com" />
                 </div>
                 <div>
                     <span>🔒</span>
                     <input type="password" placeholder="password" />
                 </div>
                 <button type = "submit" class="btn btn-primary">Login</button>
-                <button type = "submit" class="btn btn-primary">Create</button>
+                <button type = "submit" class="btn btn-dark">Create</button>
             </form>
         </main>
 
