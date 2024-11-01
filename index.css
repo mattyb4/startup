@@ -25,6 +25,9 @@
     text-align: left;
   }
   footer {
+    flex: 0 30px;
+    bottom: 0%;
+    position: fixed;
     text-align: left;
     align-items: bottom;
     margin: 10px;

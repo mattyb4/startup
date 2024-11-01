@@ -11,6 +11,9 @@
     margin-top: 5px;
   }
   footer {
+    flex: 0 30px;
+    bottom: 0%;
+    position: fixed;
     text-align: left;
     align-items: bottom;
     margin: 10px;
@@ -28,8 +31,9 @@
     display: flex;
     flex-direction: column;
     margin: 30px;
-    background-color: whitesmoke;
+    background-color: gold;
     border-radius: 10px;
+    border-style: solid;
   }
   .navbar {
     background-color: #333;
@@ -53,4 +57,5 @@
     flex-direction: column;
     background-color: white;
     border-radius: 10px;
+    border-style: solid;
   }
