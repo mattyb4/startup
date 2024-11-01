@@ -1,10 +1,11 @@
 * {
-    font-family: Arial;
+    font-family: gill sans;
   }
   body {
     display: flex;
     flex-direction: column;
     background-color: #777;
+    text-align: center;
   }
   button {
     margin-top: 5px;
@@ -23,6 +24,13 @@
   .navbar a:hover {
     color: rgb(202, 186, 186);
   }
+  .searches {
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+  }
   .navbar {
     background-color: #333;
   }
@@ -39,4 +47,10 @@
   .navbar a.active {
     background-color: rgb(99, 99, 101);
     color: white;
+  }
+  .container-fluid {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
   }
