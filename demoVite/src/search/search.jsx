@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import { SearchPokemon } from './searchfunction';
+
 import './search.css'
 
 
@@ -9,6 +10,7 @@ import './search.css'
 
 
 export function Search(props) {
+    const userName = props.data;
     const [inputValue, setInputValue] = useState('');
 
     const buttonClick = () => {
@@ -59,10 +61,10 @@ export function Search(props) {
         <body>
             <main>
                 <div className = 'top'>
-                    <div className = "user">
+                { /*  <div className = "user">
                         User: 
-                        <span className = "user-name">Username</span>
-                    </div>
+                        <span className = "user-name">{userName}</span>
+                    </div>*/}
                     <h3>Please type in a Pokemon name:</h3>
                     <form method = "get" action ="search.jsx">
                         <div>
@@ -90,7 +92,7 @@ export function Search(props) {
 
             <div className = "container-fluid">
                 <h4><strong>Today's most popular search:</strong></h4>
-                <h4>Placeholder text</h4>
+                <h4>{inputValue}</h4>
             </div>
         </body>
     );
