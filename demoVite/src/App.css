@@ -1,13 +1,11 @@
 .body {
     display: flex;
     flex-direction: column;
-    min-width: 375px;
-    height: 100vh;
 }
-.navbar {
+.navbar-nav {
     background-color: #333;
   }
-  .navbar a {
+  .navbar-nav a {
     float: left;
     color: white;
     margin: 0;
@@ -17,7 +15,7 @@
     text-align: center;
     padding: 12px 20px;
   }
-  .navbar a.active {
+  .navbar-nav a.active {
     background-color: rgb(99, 99, 101);
     color: white;
   }
@@ -29,3 +27,4 @@
     border-radius: 10px;
     border-style: solid;
   }
+ 

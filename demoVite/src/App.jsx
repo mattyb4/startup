@@ -9,34 +9,36 @@ function App() {
     return (
         <div>
             <BrowserRouter>
-                <div className="navbar">
-                    <li className='nav-item'>
-                        <NavLink className='nav-link' to=''>
-                            Login
-                        </NavLink>
-                    </li>
-                    <li className='nav-item'>
-                        <NavLink className='nav-link' to='search'>
-                            Search
-                        </NavLink>
-                    </li>
-                    <Routes>
-                        <Route 
-                            path='/'
-                            element={
-                                <Login/>
-                            }
-                            exact
-                        />
-                        <Route path='/search' element={<Search />} />
-                    </Routes>
-                    <footer>
-                        <div class = "containter-fluid">
-                            <span class="text-reset">Matt Banks:</span>
-                            <a className='text-reset' href="https://github.com/mattyb4/startup.git">GitHub</a>
-                        </div>
-                    </footer>
-                </div>
+                
+                    <menu className="navbar-nav">
+                        <li className='nav-item'>
+                            <NavLink className='nav-link' to=''>
+                                Login
+                            </NavLink>
+                        </li>
+                        <li className='nav-item'>
+                            <NavLink className='nav-link' to='search'>
+                                Search
+                            </NavLink>
+                        </li>
+                        <Routes>
+                            <Route 
+                                path='/'
+                                element={
+                                    <Login/>
+                                }
+                                exact
+                            />
+                            <Route path='/search' element={<Search />} />
+                        </Routes>
+                        <footer>
+                            <div class = "containter-fluid">
+                                <span class="text-reset">Matt Banks:</span>
+                                <a className='text-reset' href="https://github.com/mattyb4/startup.git">GitHub</a>
+                            </div>
+                        </footer>
+                    </menu>
+                
             </BrowserRouter>
         </div>
         
