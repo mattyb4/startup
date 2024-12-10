@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Initiallogin } from './logininitial';
+import { Logininitial } from './logininitial';
 
 export function Login({userName}) {
     return (
