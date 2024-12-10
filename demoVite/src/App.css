@@ -19,12 +19,16 @@
     background-color: rgb(99, 99, 101);
     color: white;
   }
-  .container-fluid {
+  .container-sm {
     flex: 1 calc(10vh - 50px);
     display: flex;
     flex-direction: column;
-    background-color: rgb(13, 238, 223);
+    background-color: rgb(246, 107, 21);
     border-radius: 10px;
     border-style: solid;
   }
+  .container-sm a:hover {
+    color: rgb(70, 70, 247);
+  }
+  
  

@@ -9,7 +9,6 @@ function App() {
     return (
         <div>
             <BrowserRouter>
-                
                     <menu className="navbar-nav">
                         <li className='nav-item'>
                             <NavLink className='nav-link' to=''>
@@ -32,9 +31,9 @@ function App() {
                             <Route path='/search' element={<Search />} />
                         </Routes>
                         <footer>
-                            <div class = "containter-fluid">
-                                <span class="text-reset">Matt Banks:</span>
-                                <a className='text-reset' href="https://github.com/mattyb4/startup.git">GitHub</a>
+                            <div className = "container-sm">
+                                <span className="text-reset">Matt Banks:</span>
+                                <a href="https://github.com/mattyb4/startup.git">GitHub</a>
                             </div>
                         </footer>
                     </menu>
