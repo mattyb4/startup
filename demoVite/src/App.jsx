@@ -7,29 +7,34 @@ import './App.css';
 
 function App() {
     return (
-        <BrowserRouter>
-            <div className="navbar">
-                <li className='nav-item'>
-                    <NavLink className='nav-link' to=''>
-                        Login
-                    </NavLink>
-                </li>
-                <li className='nav-item'>
-                    <NavLink className='nav-link' to='search'>
-                        Search
-                    </NavLink>
-                </li>
-                <Routes>
-                    <Route path='/login' element={<Login />} />
-                    <Route path='/search' element={<Search userName={userName} />} />
-                </Routes>
-                <footer>
-                    <div class = "containter-fluid">
-                        <span class="text-reset">Matt Banks:</span>
-                        <a href="https://github.com/mattyb4/startup.git">GitHub</a>
-                    </div>
-                </footer>
-            </div>
-        </BrowserRouter>
+        <div>
+            <BrowserRouter>
+                <div className="navbar">
+                    <li className='nav-item'>
+                        <NavLink className='nav-link' to=''>
+                            Login
+                        </NavLink>
+                    </li>
+                    <li className='nav-item'>
+                        <NavLink className='nav-link' to='search'>
+                            Search
+                        </NavLink>
+                    </li>
+                    <Routes>
+                        <Route path='/login' element={<Login />} />
+                        <Route path='/search' element={<Search />} />
+                    </Routes>
+                    <footer>
+                        <div class = "containter-fluid">
+                            <span class="text-reset">Matt Banks:</span>
+                            <a className='text-reset' href="https://github.com/mattyb4/startup.git">GitHub</a>
+                        </div>
+                    </footer>
+                </div>
+            </BrowserRouter>
+        </div>
+        
     );
 }
+
+export default App;
