@@ -2,7 +2,18 @@ import React from 'react';
 
 import './login.css';
 
-export function Login({userName}) {
+export function Login({props}) {
+
+    async function loginUser() {
+        localStorage.setItem('userName', userName);
+        props.onLogin(userName);
+    }
+
+    async function createUser() {
+        localStorage.setItem('userName', userName);
+        props.onLogin(userName);
+    }
+
     return (
         <body>
             <main>
@@ -17,8 +28,8 @@ export function Login({userName}) {
                             <span>🔒</span>
                             <input type="password" placeholder="password" />
                         </div>
-                        <button type = "submit" class="btn btn-primary">Login</button>
-                        <button type = "submit" class="btn btn-dark">Create</button>
+                        <button type = "submit" className="btn btn-primary">Login</button>
+                        <button type = "submit" className="btn btn-dark">Create</button>
                     </form>
                 </div>
                 <div className = "images">
