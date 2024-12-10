@@ -21,7 +21,13 @@ function App() {
                         </NavLink>
                     </li>
                     <Routes>
-                        <Route path='/login' element={<Login />} />
+                        <Route 
+                            path='/'
+                            element={
+                                <Login/>
+                            }
+                            exact
+                        />
                         <Route path='/search' element={<Search />} />
                     </Routes>
                     <footer>
