@@ -51,4 +51,14 @@ Websocket - There is a placeholder section for the day's most popular search to 
 
 ### CSS Deliverable: 
 
-coming soon
+CSS to make the website look nice has been deployed to my production environment. The Simon CSS has also been deployed to [simon.pokesearch.click](https://simon.pokesearch.click).
+
+Navigation elements - I created tabs to switch between pages in the corners of the site. I also got rid of underlines and made the links change color when the mouse hovers over them.
+
+Responsive to window resizing - I used flexbox to keep all content properly centered and resized when the window is resized.
+
+Application elements - each element has its own section and box that is clear to see so you know where everything will populate
+
+Application text content - the same font is used throughout the website with consistent formatting
+
+Application images - added images to the login page to decrease unused whitespace and make the site look better
