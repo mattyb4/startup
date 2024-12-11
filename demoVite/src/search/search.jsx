@@ -6,7 +6,20 @@ import './search.css'
 
 
 
-
+async function setPokemonType(input) {
+    const [typeValue, setTypeValue] = useState('');
+    const url = 'https://pokeapi.co/api/v2/pokemon/' + input;
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            setNumberValue(data.height);
+        });
+    if (input !== '') {
+        return (
+            <p>{typeValue} is the type</p>
+        );
+    }
+}
 
 
 export function Search(props) {
@@ -19,33 +32,64 @@ export function Search(props) {
     };
 
     const setPokedexNumber = (input) => {
+        const [numberValue, setNumberValue] = useState('');
+        const url = 'https://pokeapi.co/api/v2/pokemon/' + input;
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                setNumberValue(data.id);
+            });
+          
+
         if (input !== '') {
             return (
-                <p>{input}'s number</p>
+                <p>#{numberValue}</p>
             );
         }
     };
 
     const setPokemonType = (input) => {
+        const [typeValue, setTypeValue] = useState('');
+        const url = 'https://pokeapi.co/api/v2/pokemon/' + input;
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                const names = data.types.map(typeEntry => typeEntry.type.name).join(' ');
+                setTypeValue(names);
+            });
         if (input !== '') {
             return (
-                <p>{input}'s type</p>
+                <p>{typeValue}</p>
             );
         }
     };
     
     const setPokemonWeight = (input) => {
+        const [weightValue, setWeightValue] = useState('');
+        const url = 'https://pokeapi.co/api/v2/pokemon/' + input;
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                setWeightValue(data.weight);
+            });
         if (input !== '') {
             return (
-                <p>{input}'s Weight</p>
+                <p>{weightValue/10} kilograms</p>
             );
         }
     };
 
     const setPokemonHeight = (input) => {
+        const [heightValue, setHeightValue] = useState('');
+        const url = 'https://pokeapi.co/api/v2/pokemon/' + input;
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                setHeightValue(data.height);
+            });
         if (input !== '') {
             return (
-                <p>{input}'s Height</p>
+                <p>{heightValue/10} meters</p>
             );
         }
     };
