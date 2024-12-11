@@ -65,7 +65,7 @@ Application images - added images to the login page to decrease unused whitespac
 
 ### React Deliverable:
 
-I converted my entire backend to use React by first bundling it with Vite, and then converting all html files I was using into jsx files that used React js functions to deploy html text as well as interactive functions.
+I converted my entire backend to use React by first bundling it with Vite, and then converting all html files I was using into jsx files that used React js functions to deploy html text as well as interactive functions. The Simon React repo has also been deployed to [simon.pokesearch.click](https://simon.pokesearch.click).
 
 I mocked up app functionality by creating functions that would navigate between pages and display queried information in the following ways:
 
