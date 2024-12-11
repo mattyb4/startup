@@ -5,20 +5,16 @@ import './search.css'
 
 
 
-
-async function setPokemonType(input) {
-    const [typeValue, setTypeValue] = useState('');
+function errorChecker(input) {
     const url = 'https://pokeapi.co/api/v2/pokemon/' + input;
     fetch(url)
-        .then(response => response.json())
-        .then(data => {
-            setNumberValue(data.height);
-        });
-    if (input !== '') {
-        return (
-            <p>{typeValue} is the type</p>
-        );
-    }
+        .then(response => {
+            if (response.ok) {
+                document.getElementById("statusMessage").textContent = "Info found";
+            } else {
+                document.getElementById("statusMessage").textContent = "Error: invalid input";
+            }
+        })
 }
 
 
@@ -31,15 +27,28 @@ export function Search(props) {
         setInputValue(inputField.value);
     };
 
+
+
     const setPokedexNumber = (input) => {
         const [numberValue, setNumberValue] = useState('');
         const url = 'https://pokeapi.co/api/v2/pokemon/' + input;
         fetch(url)
-            .then(response => response.json())
-            .then(data => {
-                setNumberValue(data.id);
-            });
-          
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Invalid response');
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (data && data.id) {
+                setNumberValue(data.id); // Only set if valid data
+            } else {
+                setNumberValue(''); // Reset if data is invalid
+            }
+        })
+        .catch(() => {
+            setNumberValue(''); // Reset if fetch or parsing fails
+        });
 
         if (input !== '') {
             return (
@@ -124,7 +133,7 @@ export function Search(props) {
                 </div>
                 <div className = "searches">
                     <h4><strong>Your most recent search: {inputValue}</strong></h4>
-                    <h4>Info for {inputValue}</h4>
+                    <h4 id = "statusMessage">checking API...{errorChecker(inputValue)}</h4>
                     <h5><strong>Pokedex Number</strong> {setPokedexNumber(inputValue)}</h5>
                     <h5><strong>Type</strong> {setPokemonType(inputValue)}</h5>
                     <h5><strong>Height</strong> {setPokemonHeight(inputValue)}</h5>
