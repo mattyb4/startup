@@ -62,3 +62,13 @@ Application elements - each element has its own section and box that is clear to
 Application text content - the same font is used throughout the website with consistent formatting
 
 Application images - added images to the login page to decrease unused whitespace and make the site look better
+
+### React Deliverable:
+
+I converted my entire backend to use React by first bundling it with Vite, and then converting all html files I was using into jsx files that used React js functions to deploy html text as well as interactive functions. The Simon React repo has also been deployed to [simon.pokesearch.click](https://simon.pokesearch.click).
+
+I mocked up app functionality by creating functions that would navigate between pages and display queried information in the following ways:
+
+React router - I used React path routing to create a navbar that would allow for quick navigation between my login page and my app page. The login button now also takes you to the app page using routing.
+
+React hooks - I used React hook functions such as useState() to accept input from the search text box and populate the box with placeholder information on whatever input you searched. Once I have my 3rd party service calls functional, the information will be pulled from a 3rd party API call rather than generic placeholder text.
