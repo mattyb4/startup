@@ -72,3 +72,17 @@ I mocked up app functionality by creating functions that would navigate between 
 React router - I used React path routing to create a navbar that would allow for quick navigation between my login page and my app page. The login button now also takes you to the app page using routing.
 
 React hooks - I used React hook functions such as useState() to accept input from the search text box and populate the box with placeholder information on whatever input you searched. Once I have my 3rd party service calls functional, the information will be pulled from a 3rd party API call rather than generic placeholder text.
+
+***NOTE: this deliverable was *not* graded before I worked on and submitted the service deliverable. Some things may be slightly different (such as an updated Simon deployment and working API calls instead of placeholder text)
+
+### Service Deliverable:
+
+I created an HTTP servce using Express and setup frontend and backend calls. I also deployed the updated Simon code to [simon.pokesearch.click](https://simon.pokesearch.click).
+
+Frontend served up using Express - I followed the direcions and created a service using Express similar to the Simon code, and included the necessary lines of code for it to use Express static middleware.
+
+Third party service calls - the heart of the application is its use of API calls from pokeapi.co. By searching for a specific pokemon, it pulls information from that website about that pokemon and displays that info on the application page. It also informs you if you spelled something wrong by throwing an error instead of populating with weird or nonexistent information.
+
+Backend endpoints - I set up a test backend endpoint at http://localhost:4000/api/test to hold test data that I sent there utilizing my service.
+
+Frontend calls to backend - I have a function that pulls that testdata and displays it as placeholder text on my app for an unfinished function that will display the last searched item by *any* user on the site.
