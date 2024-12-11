@@ -28,15 +28,18 @@ export function Search(props) {
         const inputField = document.getElementById('userInput');
         setInputValue(inputField.value.toLowerCase());
         saveSearch(inputValue);
+        console.log('button clicked');
     };
 
     function saveSearch(input) {
         const newSearch = { name: input };
+        console.log('in save search');
         fetch('/api/search', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(newSearch),
         });
+        console.log('sent data');
     }
 
     const retrieveSearch = () => {
@@ -192,7 +195,7 @@ export function Search(props) {
 
             <div className = "container-fluid">
                 <h4><strong>Today's most recent search:</strong></h4>
-                <h4>{retrieveSearch()}</h4>
+                <h4>{retrieveSearch()}<p>(taken from /api/test)</p></h4>
             </div>
         </body>
     );

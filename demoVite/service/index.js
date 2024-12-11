@@ -33,3 +33,6 @@ apiRouter.get('/test', (_req, res) => {
 apiRouter.get('/search', (_req, res) => {
     res.send(searches);
 });
+apiRouter.post('/search', (_req, res) => {
+    res.send(_req.body);
+});
