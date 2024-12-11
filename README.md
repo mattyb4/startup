@@ -37,31 +37,31 @@ The website will also have info on the most popular searches from other uses pos
 
 ### HTML Deliverable: 
 
-HTML pages - I created two HTML pages (index.html and search.html) that will prompt the user to login or create an account and then be taken to a page where they can conduct searches. I also deployed the Simon HTML at [simon.pokesearch.click](https://simon.pokesearch.click).
+**HTML pages** - I created two HTML pages (index.html and search.html) that will prompt the user to login or create an account and then be taken to a page where they can conduct searches. I also deployed the Simon HTML at [simon.pokesearch.click](https://simon.pokesearch.click).
 
-Links - I have a nav bar that allows for easy navigation between the two pages. I also have a footer on each page that links to my github repo.
+**Links** - I have a nav bar that allows for easy navigation between the two pages. I also have a footer on each page that links to my github repo.
 
-Text - There is text instructing the user on what to do or what they're being prompted for, as well as placeholder text for where information will be populated from API calls and database info. The page will also display the user's username after they log in.
+**Text** - There is text instructing the user on what to do or what they're being prompted for, as well as placeholder text for where information will be populated from API calls and database info. The page will also display the user's username after they log in.
 
-Images - I have held off on this until after I do CSS styling so I know for sure where would make sense for images to be.
+**Images** - I have held off on this until after I do CSS styling so I know for sure where would make sense for images to be.
 
-DB/Login - the landing page prompts you to login or create an account so that the user's searches can be logged in a database, which will allow my most recent searches section to work.
+**DB/Login** - the landing page prompts you to login or create an account so that the user's searches can be logged in a database, which will allow my most recent searches section to work.
 
-Websocket - There is a placeholder section for the day's most popular search to populate when multiple users are using the application.
+**Websocket** - There is a placeholder section for the day's most popular search to populate when multiple users are using the application.
 
 ### CSS Deliverable: 
 
 CSS to make the website look nice has been deployed to my production environment. The Simon CSS has also been deployed to [simon.pokesearch.click](https://simon.pokesearch.click).
 
-Navigation elements - I created tabs to switch between pages in the corners of the site. I also got rid of underlines and made the links change color when the mouse hovers over them.
+**Navigation elements** - I created tabs to switch between pages in the corners of the site. I also got rid of underlines and made the links change color when the mouse hovers over them.
 
-Responsive to window resizing - I used flexbox to keep all content properly centered and resized when the window is resized.
+**Responsive to window resizing** - I used flexbox to keep all content properly centered and resized when the window is resized.
 
-Application elements - each element has its own section and box that is clear to see so you know where everything will populate
+**Application elements** - each element has its own section and box that is clear to see so you know where everything will populate
 
-Application text content - the same font is used throughout the website with consistent formatting
+**Application text content** - the same font is used throughout the website with consistent formatting
 
-Application images - added images to the login page to decrease unused whitespace and make the site look better
+**Application images** - added images to the login page to decrease unused whitespace and make the site look better
 
 ### React Deliverable:
 
@@ -69,9 +69,9 @@ I converted my entire backend to use React by first bundling it with Vite, and t
 
 I mocked up app functionality by creating functions that would navigate between pages and display queried information in the following ways:
 
-React router - I used React path routing to create a navbar that would allow for quick navigation between my login page and my app page. The login button now also takes you to the app page using routing.
+**React router** - I used React path routing to create a navbar that would allow for quick navigation between my login page and my app page. The login button now also takes you to the app page using routing.
 
-React hooks - I used React hook functions such as useState() to accept input from the search text box and populate the box with placeholder information on whatever input you searched. Once I have my 3rd party service calls functional, the information will be pulled from a 3rd party API call rather than generic placeholder text.
+**React hooks** - I used React hook functions such as useState() to accept input from the search text box and populate the box with placeholder information on whatever input you searched. Once I have my 3rd party service calls functional, the information will be pulled from a 3rd party API call rather than generic placeholder text.
 
 **NOTE: this deliverable was *not* graded before I worked on and submitted the service deliverable. Some things may be slightly different (such as an updated Simon deployment and working API calls instead of placeholder text)**
 
@@ -79,10 +79,10 @@ React hooks - I used React hook functions such as useState() to accept input fro
 
 I created an HTTP servce using Express and setup frontend and backend calls. I also deployed the updated Simon code to [simon.pokesearch.click](https://simon.pokesearch.click).
 
-Frontend served up using Express - I followed the directions and created a service using Express similar to the Simon code, and included the necessary lines of code for it to use Express static middleware.
+**Frontend served up using Express** - I followed the directions and created a service using Express similar to the Simon code, and included the necessary lines of code for it to use Express static middleware.
 
-Third party service calls - the heart of the application is its use of API calls from pokeapi.co. By searching for a specific pokemon, it pulls information from that website about that pokemon and displays that info on the application page. It also informs you if you spelled something wrong by throwing an error instead of populating with weird or nonexistent information.
+**Third party service calls** - the heart of the application is its use of API calls from pokeapi.co. By searching for a specific pokemon, it pulls information from that website about that pokemon and displays that info on the application page. It also informs you if you spelled something wrong by throwing an error instead of populating with weird or nonexistent information.
 
-Backend endpoints - I set up a test backend endpoint at http://localhost:4000/api/test to hold test data that I sent there utilizing my service.
+**Backend endpoints** - I set up a test backend endpoint at http://localhost:4000/api/test to hold test data that I sent there utilizing my service.
 
-Frontend calls to backend - I have a function that pulls that testdata and displays it as placeholder text on my app for an unfinished function that will display the last searched item by *any* user on the site.
+**Frontend calls to backend** - I have a function that pulls that testdata and displays it as placeholder text on my app for an unfinished function that will display the last searched item by *any* user on the site.
