@@ -33,26 +33,26 @@ export function Search(props) {
         const [numberValue, setNumberValue] = useState('');
         const url = 'https://pokeapi.co/api/v2/pokemon/' + input;
         fetch(url)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Invalid response');
-            }
-            return response.json();
-        })
-        .then(data => {
-            if (data && data.id) {
-                setNumberValue(data.id); // Only set if valid data
-            } else {
-                setNumberValue(''); // Reset if data is invalid
-            }
-        })
-        .catch(() => {
-            setNumberValue(''); // Reset if fetch or parsing fails
-        });
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Invalid response');
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data && data.id) {
+                    setNumberValue(`#${data.id}`); // Only set if valid data
+                } else {
+                    setNumberValue(''); // Reset if data is invalid
+                }
+            })
+            .catch(() => {
+                setNumberValue(''); // Reset if fetch or parsing fails
+            });
 
         if (input !== '') {
             return (
-                <p>#{numberValue}</p>
+                <p>{numberValue}</p>
             );
         }
     };
@@ -61,10 +61,23 @@ export function Search(props) {
         const [typeValue, setTypeValue] = useState('');
         const url = 'https://pokeapi.co/api/v2/pokemon/' + input;
         fetch(url)
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) {
+                    setTypeValue('');
+                    throw new Error('Invalid response');
+                }
+                return response.json();
+            })
             .then(data => {
-                const names = data.types.map(typeEntry => typeEntry.type.name).join(' ');
-                setTypeValue(names);
+                if (data && data.types) {
+                    const names = data.types.map(typeEntry => typeEntry.type.name).join(' ');
+                    setTypeValue(names);
+                } else {
+                    setTypeValue('');
+                }
+            })
+            .catch(() => {
+                setNumberValue('');
             });
         if (input !== '') {
             return (
@@ -77,13 +90,19 @@ export function Search(props) {
         const [weightValue, setWeightValue] = useState('');
         const url = 'https://pokeapi.co/api/v2/pokemon/' + input;
         fetch(url)
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) {
+                    setWeightValue('');
+                    throw new Error('Invalid response');
+                }
+                return response.json();
+            })
             .then(data => {
-                setWeightValue(data.weight);
+                setWeightValue(`${data.weight/10} kilograms`);
             });
         if (input !== '') {
             return (
-                <p>{weightValue/10} kilograms</p>
+                <p>{weightValue}</p>
             );
         }
     };
@@ -92,13 +111,19 @@ export function Search(props) {
         const [heightValue, setHeightValue] = useState('');
         const url = 'https://pokeapi.co/api/v2/pokemon/' + input;
         fetch(url)
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) {
+                    setHeightValue('');
+                    throw new Error('Invalid response');
+                }
+                return response.json();
+            })
             .then(data => {
-                setHeightValue(data.height);
+                setHeightValue(`${data.height/10} meters`);
             });
         if (input !== '') {
             return (
-                <p>{heightValue/10} meters</p>
+                <p>{heightValue}</p>
             );
         }
     };
@@ -144,7 +169,7 @@ export function Search(props) {
             </main>
 
             <div className = "container-fluid">
-                <h4><strong>Today's most popular search:</strong></h4>
+                <h4><strong>Today's most recent search:</strong></h4>
                 <h4>{inputValue}</h4>
             </div>
         </body>
