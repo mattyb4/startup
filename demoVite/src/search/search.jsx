@@ -9,8 +9,10 @@ function errorChecker(input) {
     const url = 'https://pokeapi.co/api/v2/pokemon/' + input;
     fetch(url)
         .then(response => {
-            if (response.ok) {
-                document.getElementById("statusMessage").textContent = "Info on " + input;
+            if (response.ok && input) {
+                document.getElementById("statusMessage").textContent = "Here is info on " + input;
+            } else if (response.ok && !input) {
+                document.getElementById("statusMessage").textContent = input;
             } else {
                 document.getElementById("statusMessage").textContent = "Error - invalid input. Please check your spelling and try again";
             }
@@ -25,9 +27,29 @@ export function Search(props) {
     const buttonClick = () => {
         const inputField = document.getElementById('userInput');
         setInputValue(inputField.value.toLowerCase());
+        saveSearch(inputValue);
     };
 
+    function saveSearch(input) {
+        const newSearch = { name: input };
+        fetch('/api/search', {
+            method: 'POST',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify(newSearch),
+        });
+    }
 
+    const retrieveSearch = () => {
+        const [value, setValue] = useState('');
+        fetch('/api/test')
+            .then((response) => response.json())
+            .then((testing) => {
+                setValue(testing.test);
+            })
+        return (
+            <p>{value}</p>
+        )
+    };
 
     const setPokedexNumber = (input) => {
         const [numberValue, setNumberValue] = useState('');
@@ -77,7 +99,7 @@ export function Search(props) {
                 }
             })
             .catch(() => {
-                setNumberValue('');
+                setTypeValue('');
             });
         if (input !== '') {
             return (
@@ -153,7 +175,7 @@ export function Search(props) {
                                 placeholder = "Pokemon Name" 
                             />
                         </div>
-                        <button type = "button" class="btn btn-danger btn-sm" onClick={buttonClick}>Search</button>
+                        <button type = "button" className="btn btn-danger btn-sm" onClick={buttonClick}>Search</button>
                     </form>
                 </div>
                 <div className = "searches">
@@ -170,7 +192,7 @@ export function Search(props) {
 
             <div className = "container-fluid">
                 <h4><strong>Today's most recent search:</strong></h4>
-                <h4>{inputValue}</h4>
+                <h4>{retrieveSearch()}</h4>
             </div>
         </body>
     );
