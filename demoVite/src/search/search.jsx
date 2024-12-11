@@ -10,9 +10,9 @@ function errorChecker(input) {
     fetch(url)
         .then(response => {
             if (response.ok) {
-                document.getElementById("statusMessage").textContent = "Info found";
+                document.getElementById("statusMessage").textContent = "Info on " + input;
             } else {
-                document.getElementById("statusMessage").textContent = "Error: invalid input";
+                document.getElementById("statusMessage").textContent = "Error - invalid input. Please check your spelling and try again";
             }
         })
 }
@@ -24,7 +24,7 @@ export function Search(props) {
 
     const buttonClick = () => {
         const inputField = document.getElementById('userInput');
-        setInputValue(inputField.value);
+        setInputValue(inputField.value.toLowerCase());
     };
 
 
@@ -41,13 +41,13 @@ export function Search(props) {
             })
             .then(data => {
                 if (data && data.id) {
-                    setNumberValue(`#${data.id}`); // Only set if valid data
+                    setNumberValue(`#${data.id}`); 
                 } else {
-                    setNumberValue(''); // Reset if data is invalid
+                    setNumberValue(''); 
                 }
             })
             .catch(() => {
-                setNumberValue(''); // Reset if fetch or parsing fails
+                setNumberValue(''); 
             });
 
         if (input !== '') {
@@ -175,3 +175,5 @@ export function Search(props) {
         </body>
     );
 }
+
+export default Search;
