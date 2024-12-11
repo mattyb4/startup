@@ -124,7 +124,7 @@ export function Search(props) {
                 </div>
                 <div className = "searches">
                     <h4><strong>Your most recent search: {inputValue}</strong></h4>
-                    <h4>{inputValue}</h4>
+                    <h4>Info for {inputValue}</h4>
                     <h5><strong>Pokedex Number</strong> {setPokedexNumber(inputValue)}</h5>
                     <h5><strong>Type</strong> {setPokemonType(inputValue)}</h5>
                     <h5><strong>Height</strong> {setPokemonHeight(inputValue)}</h5>
