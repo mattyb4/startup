@@ -79,7 +79,7 @@ React hooks - I used React hook functions such as useState() to accept input fro
 
 I created an HTTP servce using Express and setup frontend and backend calls. I also deployed the updated Simon code to [simon.pokesearch.click](https://simon.pokesearch.click).
 
-Frontend served up using Express - I followed the direcions and created a service using Express similar to the Simon code, and included the necessary lines of code for it to use Express static middleware.
+Frontend served up using Express - I followed the directions and created a service using Express similar to the Simon code, and included the necessary lines of code for it to use Express static middleware.
 
 Third party service calls - the heart of the application is its use of API calls from pokeapi.co. By searching for a specific pokemon, it pulls information from that website about that pokemon and displays that info on the application page. It also informs you if you spelled something wrong by throwing an error instead of populating with weird or nonexistent information.
 
