@@ -37,8 +37,8 @@ export function Login(props) {
                     </form>
                 </div>
                 <div className = "images">
-                    <img className = "pikachu" src="src/assets/pikachu.jpeg" alt="Pikachu" />
-                    <img className = "starters" src="src/assets/starters.jpg" alt="starters" />
+                    <img className = "pikachu" src="/pikachu.jpeg" alt="Pikachu" />
+                    <img className = "starters" src="/starters.jpg" alt="starters" />
                 </div>
             </main>
         </body>
