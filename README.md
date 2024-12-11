@@ -73,7 +73,7 @@ React router - I used React path routing to create a navbar that would allow for
 
 React hooks - I used React hook functions such as useState() to accept input from the search text box and populate the box with placeholder information on whatever input you searched. Once I have my 3rd party service calls functional, the information will be pulled from a 3rd party API call rather than generic placeholder text.
 
-***NOTE: this deliverable was *not* graded before I worked on and submitted the service deliverable. Some things may be slightly different (such as an updated Simon deployment and working API calls instead of placeholder text)
+**NOTE: this deliverable was *not* graded before I worked on and submitted the service deliverable. Some things may be slightly different (such as an updated Simon deployment and working API calls instead of placeholder text)**
 
 ### Service Deliverable:
 
